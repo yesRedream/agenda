@@ -1,0 +1,135 @@
+.main-about {
+  background-image: url(../images/main-page/about-bg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.main-about__img-wrapper {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.main-about__wrapper {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.main-about__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 720px;
+  min-height: 100vh;
+  padding: 90px 0 60px 0;
+  box-sizing: border-box;
+
+  @media (--viewport-tablet) {
+    padding: 90px 0 78px 0;
+    min-height: 600px;
+    height: 100vh;
+    /* justify-content: space-between; */
+  }
+}
+
+.main-about__box {
+}
+
+.main-about__title {
+  font-size: 25px;
+  line-height: 1.35;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @media (--viewport-tablet) {
+    font-size: 45px;
+  }
+}
+
+.main-about__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 30px;
+
+
+  @media (--viewport-phone) {
+    margin-bottom: 20px;
+  }
+
+  @media (--viewport-tablet) {
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+}
+
+.main-about__btn {
+  margin-bottom: 10px;
+}
+
+.main-about-guarantee {
+  display: flex;
+  align-items: center;
+}
+
+.main-about-guarantee__icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.main-about-guarantee__text {
+  font-size: 12px;
+  line-height: 2.1;
+  color: #ffffff;
+}
+
+.main-about-action {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  z-index: 2;
+
+  @media (--viewport-phone) {
+    display: none;
+  }
+
+  @media (--viewport-tablet) {
+    display: block;
+    bottom: 78px;
+  }
+}
+
+.main-about-action__icons-wrap {
+  position: relative;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.main-about-action__icon {
+  width: 20px;
+  height: 21px;
+  &:first-child {
+    fill: #FBE4E3;
+    opacity: .5;
+  }
+
+  &:last-child {
+    position: absolute;
+    fill: #ffffff;
+    top: 10px;
+    left: 0;
+  }
+}
+
+.main-about-action__text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ffffff;
+}

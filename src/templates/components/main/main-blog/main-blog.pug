@@ -1,0 +1,32 @@
+include main-blog.data.pug
+
+div.main-blog
+  div.main-blog__wrapper.wrapper
+    div.main-blog__data
+      h2.main-blog__title Agenda.Video Blog
+        span.red-text .
+
+  div.main-blog__box.main-blog__box--slider
+    div.main-blog-slider__wrapper.wrapper
+      div.main-blog-slider__content
+        div.main-blog-slider__list
+          each blogItem in blogItems
+            div.blog-item
+              div.blog-item__img-wrapper
+                img(src=blogItem.img, alt="").blog-item__img
+              div.blog-item__content
+                div.blog-item__btn
+                  svg.blog-item__btn-icon
+                    use(href="#play")
+                h6.blog-item__date= blogItem.date
+                p.blog-item__text= blogItem.text
+                  span.red-text .
+
+    div.wrapper
+      div.main-blog-slider__arrows
+        div.main-blog-slider__prev
+          svg.main-blog-slider__ico
+            use(href="#slider-left-arrow")
+        div.main-blog-slider__next
+          svg.main-blog-slider__ico
+            use(href="#slider-right-arrow")

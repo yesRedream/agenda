@@ -1,0 +1,224 @@
+.qs-datepicker-container {
+  top: 48px !important;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  border: 1px solid #d4d9dd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fff;
+  width: 270px;
+  padding: 15px 25px;
+}
+
+.qs-controls {
+  background: inherit;
+  margin-bottom: 15px;
+}
+
+.qs-arrow {
+  height: 1.5625em;
+  width: 1.5625em;
+  position: relative;
+  cursor: pointer;
+  border-radius: .26392em;
+  -webkit-transition: background .15s;
+  transition: background .15s
+}
+
+.qs-arrow:hover {
+  background: rgba(0, 0, 0, .1)
+}
+
+.qs-arrow:hover.qs-left:after {
+  border-right-color: #000
+}
+
+.qs-arrow:hover.qs-right:after {
+  border-left-color: #000
+}
+
+.qs-arrow:after {
+  content: "";
+  border: .39062em solid rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 50%;
+  -webkit-transition: border .2s;
+  transition: border .2s
+}
+
+.qs-arrow.qs-left:after {
+  border-right-color: grey;
+  right: 50%;
+  -webkit-transform: translate(25%, -50%);
+  -ms-transform: translate(25%, -50%);
+  transform: translate(25%, -50%)
+}
+
+.qs-arrow.qs-right:after {
+  border-left-color: grey;
+  left: 50%;
+  -webkit-transform: translate(-25%, -50%);
+  -ms-transform: translate(-25%, -50%);
+  transform: translate(-25%, -50%)
+}
+
+.qs-month-year {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2f4366;
+}
+
+.qs-month-year:hover {
+  border-bottom: 1px solid grey
+}
+
+.qs-month-year:active:focus,
+.qs-month-year:focus {
+  outline: none
+}
+
+.qs-month {
+  padding-right: .5ex
+}
+
+.qs-year {
+  padding-left: .5ex
+}
+
+.qs-squares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s
+}
+
+.qs-squares.qs-blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px)
+}
+
+.qs-square {
+  height: 26px;
+  width: 26px;
+  margin-right: 5px;
+  border-radius: 100%;
+  color: #2f4366;
+  transition: .2s all;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+
+  line-height: 16px;
+}
+
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):not(.qs-range-middle):not(.qs-range-end):not(.qs-range-start):hover {
+  background: rgba(175,186,204,.2);
+}
+
+
+
+.qs-current {
+  font-weight: inherit !important;
+  text-decoration: none !important;
+}
+
+.qs-active,
+.qs-range-end,
+.qs-range-start {
+  background: #289fee;
+  color: #fff;
+
+  &:hover {
+    background: #289fee !important;
+    color: #fff !important;
+  }
+}
+
+.qs-range-start:not(.qs-range-6) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.qs-range-middle {
+  background:#47adf1;
+  color: #fff;
+  position: relative;
+
+  &:hover {
+    background: #289fee !important;
+    color: #fff !important;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background:#47adf1;
+  }
+
+  &:before {
+    left: -5px;
+  }
+
+  &:after {
+    right: -5px;
+  }
+}
+
+
+.qs-disabled {
+  opacity: .2
+}
+
+.qs-outside-current-month {
+  opacity: 1;
+}
+
+
+.qs-outside-current-month.qs-range-middle {
+  background: #ddeefc;
+
+  &:hover {
+    background: #ddeefc !important;
+  }
+  &:before,
+  &:after {
+    background: #ddeefc;
+  }
+  
+}
+
+.qs-day {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #2f4366;
+  padding-bottom: 10px;
+}
+
+.qs-event {
+  position: relative
+}
+
+.qs-event:after {
+  content: "";
+  position: absolute;
+  width: .46875em;
+  height: .46875em;
+  border-radius: 50%;
+  background: #07f;
+  bottom: 0;
+  right: 0
+}

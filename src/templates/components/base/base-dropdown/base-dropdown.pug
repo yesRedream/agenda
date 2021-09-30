@@ -1,0 +1,17 @@
+mixin base-dropdown-item(className, data)
+  div.base-dropdown-select__item(class=className)
+    div.base-dropdown-select__item-data.js-dropdown-select-item-data(data-dropdown=data.icon)
+      div.base-dropdown-select__text=data.text
+
+    svg.base-dropdown-select__dropdown-icon
+      use(href="#dropdown-arrow")
+
+mixin base-dropdown(className, data, defaultData)
+  // Base dropdown Select
+  div.base-dropdown-select.js-dropdown-select(class=className)
+    +base-dropdown-item('base-dropdown-select__item--current js-dropdown-select-current', { text: defaultData })
+
+    div.base-dropdown-select__dropdown.js-dropdown-select-dropdown
+      each dropdown in data
+        +base-dropdown-item('js-dropdown-select-dropdown-item', { text: dropdown })
+  // Base dropdown Select

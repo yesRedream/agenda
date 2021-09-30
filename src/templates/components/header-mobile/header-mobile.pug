@@ -1,0 +1,30 @@
+include /components/base/base-dropdown/base-dropdown
+include header-mobile.data.pug
+
+header.header-mobile
+  div.header-mobile__data
+    div.header-mobile__box.header-mobile__box--logo
+      img(src="images/logo-black.svg", alt="logo").header-mobile__logo
+
+    div.header-mobile__box.header-mobile__box--menu
+      svg.header-mobile__menu-ico.header-mobile__menu-ico--active
+        use(href="#header-menu")
+      svg.header-mobile__close-ico
+        use(href="#header-close")
+  div.header-mobile-menu
+    div.header-mobile-menu__content
+      h6.header-mobile-menu__title Categories
+      div.header-mobile-menu__list
+        a.header-mobile-menu__link(href="#") Hotels
+        a.header-mobile-menu__link(href="#") Real Estate
+        a.header-mobile-menu__link(href="#") Restaurants
+          span.header-mobile-menu__prefix soon
+      h6.header-mobile-menu__title Language
+      div.header-mobile-menu__box
+        div.header-mobile-menu__input-wrap
+          input(type="radio" name="language" id="eng" checked).header-mobile-menu__input
+          label(for="eng").header-mobile-menu__label En
+        div.header-mobile-menu__input-wrap
+          input(type="radio" name="language" id="rus").header-mobile-menu__input
+          label(for="rus").header-mobile-menu__label Ru
+    div.header-mobile-menu__bg

@@ -1,0 +1,25 @@
+extends layouts/main
+
+block variables
+  - pageTitle = 'Home Page'
+
+block content
+  div.main
+    include components/header/header
+    include components/header-mobile/header-mobile
+
+    section.main__section.main__section--about
+      include components/main/main-about/main-about
+    section.main__section.main__section--companies
+      include components/main/main-companies/main-companies
+    section.main__section.main__section--videos
+      include components/main/main-videos/main-videos
+    section.main__section.main__section--places
+      include components/main/main-places/main-places
+    section.main__section.main__section--advantages
+      include components/main/main-advantages/main-advantages
+    section.main__section.main__section--discount
+      include components/main/main-discount/main-discount
+    section.main__section.main__section--blog
+      include components/main/main-blog/main-blog
+    include components/footer/footer

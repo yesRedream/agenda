@@ -1,0 +1,144 @@
+.main-advantages {
+  padding-bottom: 60px;
+
+  @media (--viewport-tablet) {
+    padding-bottom: 150px;
+  }
+}
+
+.main-advantages__wrapper {
+
+}
+
+.main-advantages__data {
+}
+
+.main-advantages__title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000000;
+
+  @media (--viewport-tablet) {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+}
+
+.main-advantages__subtitle {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #808080;
+  margin-bottom: 25px;
+
+  @media (--viewport-tablet) {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+.main-advantages__box {
+  position: relative;
+}
+
+.main-advantages__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (--viewport-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 100px 5px 0;
+    background: #EEF2F4;
+    border-radius: 5px;
+
+    &:before {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 50%;
+      background: #EEF2F4;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+.main-advantages-item {
+  background: #FFFFFF;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 18px 15px 15px 15px;
+  margin-bottom: 5px;
+  
+
+  @media (--viewport-tablet) {
+    width: 260px;
+    margin-bottom: 55px;
+    padding: 0 0 60px 0;
+    border-bottom: 1px solid #d5dadc;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+
+.main-advantages-item__img-wrapper {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-bottom: 12px;
+
+  @media (--viewport-tablet) {
+    width: 33px;
+    height: 33px;
+    margin-bottom: 22px;
+  }
+}
+
+.main-advantages-item__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.main-advantages-item__title {
+  color: #262626;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+
+  @media (--viewport-tablet) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+}
+
+.main-advantages-item__text {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  color: #808080;
+
+  @media (--viewport-tablet) {
+    line-height: 1.8;
+  }
+}

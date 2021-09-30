@@ -1,0 +1,79 @@
+.main-discount {
+  padding-bottom: 70px;
+
+  @media (--viewport-tablet) {
+    padding-bottom: 150px;
+  }
+}
+
+.main-discount__wrapper {
+
+}
+
+.main-discount__data {
+  padding: 48px 30px 30px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 5px;
+  background-image: url('/images/main-page/sale-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  @media (--viewport-tablet) {
+    padding: 90px 80px 60px 80px;
+  }
+}
+
+.main-discount__title {
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 34px;
+
+  @media (--viewport-phone) {
+    max-width: 300px;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+  }
+  
+  @media (--viewport-tablet) {
+    max-width: 530px;
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 44px;
+  }
+}
+
+.main-discount__bookmark {
+  background: #E4281A;
+  transform: rotate(45deg) translate(50%, 50%);
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  top: -58px;
+  right: -3px;
+  width: 188px;
+  box-sizing: border-box;
+
+  @media (--viewport-tablet) {
+    font-size: 12px;
+    padding: 14px;
+    top: -51px;
+    right: 9px;
+  }
+}
+
+.main-discount__btn {
+  padding-left: 30px;
+  padding-right: 30px;
+}

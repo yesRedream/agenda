@@ -1,0 +1,262 @@
+.main-blog {
+  padding-bottom: 60px;
+
+  @media (--viewport-tablet) {
+    padding-bottom: 70px;
+  }
+}
+
+.main-blog__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #010202;
+
+  @media (--viewport-tablet) {
+    font-size: 36px;
+  }
+}
+
+.main-blog__box {
+  position: relative;
+}
+.main-blog-slider__wrapper {
+}
+
+.main-blog-slider__list {
+  position: initial;
+}
+
+.main-blog-slider__item {
+  width: 100%;
+}
+
+.blog-item {
+  width: 281px !important;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 60px rgba(107, 107, 107, 0.206324);
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @media (--viewport-tablet) {
+    width: 360px !important;
+  }
+}
+
+.blog-item__img-wrapper {
+  padding-bottom: 230px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.blog-item__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-item__content {
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.blog-item__btn {
+  width: 50px;
+  height: 50px;
+  background: #E4291A;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
+  border-radius: 67px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: -25px;
+  cursor: pointer;
+
+  &:hover {
+    background: #A9281A;
+  }
+}
+
+
+
+.blog-item__btn-icon {
+  width: 13px;
+  height: 14px;
+}
+
+.blog-item__date {
+  font-size: 12px;
+  line-height: 1.25;
+  color: rgba(1, 2, 2, 0.5);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.blog-item__text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #010202;
+
+  @media (--viewport-tablet) {
+    font-size: 20px;
+  }
+}
+
+
+.main-blog-slider__arrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-blog-slider__prev,
+.main-blog-slider__next {
+
+  @media (--viewport-tablet) {
+    width: 188px;
+    height: 188px;
+    background: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 45px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+}
+
+.main-blog-slider__prev {
+  @media (--viewport-tablet) {
+    left: 0;
+    top: 50%;
+    transform: translate(-55%, -50%);
+    justify-content: flex-end;
+  }
+}
+
+.main-blog-slider__next {
+  @media (--viewport-tablet) {
+    right: 0;
+    top: 50%;
+    transform: translate(55%, -50%);
+  }
+}
+
+.main-blog-slider__ico {
+  fill: #D8D8D8;
+  width: 11px;
+  height: 20px;
+
+  @media (--viewport-tablet) {
+    fill: #FFFFFF;
+    width: 16px;
+    height: 30px;
+  }
+}
+
+.main-blog-slider__list {
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slider {
+    position: relative;
+  }
+
+  .slick-slide {
+    margin: 0 5px;
+    height: auto;
+    display: inline-block !important;
+    outline: none;
+
+    &> div {
+      height: 100%;
+    }
+
+    @media (--viewport-tablet) {
+      margin: 0 17px;
+    }
+  }
+
+  .slick-list {
+    overflow: visible;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    color: black;
+  }
+  .slick-next,
+  .slick-prev {
+    height: 100%;
+    width: 150px;
+    z-index: 2;
+  }
+  .slick-prev,
+  .slick-prev:hover {
+    left: 0;
+    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+  }
+  .slick-next,
+  .slick-next:hover {
+    right: 0;
+    background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+  }
+  .slick-next.slick-disabled:before,
+  .slick-prev.slick-disabled:before {
+    display: none;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 120px);
+
+    li {
+      flex: 1;
+      background: #D8D8D8;
+      height: 3px;
+      display: flex;
+  
+      &:first-child {
+        border-radius: 3px 0 0 3px;
+      }
+  
+      &:last-child {
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  
+    button {
+      font-size: 0;
+      width: 100%;
+    }
+  
+    .slick-active {
+      button {
+        background: #E4291A;
+        border-radius: 2px;
+        height: 3px;
+      }
+    }
+  }
+}

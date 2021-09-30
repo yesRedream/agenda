@@ -1,0 +1,19 @@
+include main-advantages.data.pug
+
+div.main-advantages
+  div.main-advantages__wrapper.wrapper
+    div.main-advantages__data
+      h3.main-advantages__title Why Agenda.Video?
+      p.main-advantages__subtitle Duis aute irure dolor in reprehenderit in voluptate. 
+
+  
+  div.main-advantages__box
+    div.main-advantages__list-wrapper.wrapper
+      div.main-advantages__list
+        each advantage in advantages
+          div.main-advantages__item.main-advantages-item
+            div.main-advantages-item__img-wrapper
+              img(src=advantage.img, alt="").main-advantages-item__img
+            h5.main-advantages-item__title=advantage.title
+              span.red-text .
+            p.main-advantages-item__text=advantage.text

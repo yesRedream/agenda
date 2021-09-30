@@ -1,0 +1,51 @@
+.section-title {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 500;
+    color: #001334;
+}
+
+    @media (min-width: 34.375rem) {.section-title {
+      font-size: 30px;
+      line-height: 35px
+}
+    }
+
+.bold {
+  font-weight: 700;
+}
+
+.medium-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #323254;
+}
+
+@media (min-width: 34.375rem) {
+
+.medium-title {
+    font-size: 18px;
+    line-height: 32px
+}
+  }
+
+.regular-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #748299;
+}
+
+@media (min-width: 34.375rem) {
+
+.regular-text {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 24px
+}
+  }
+
+.red-text {
+  color: #E4281A;
+}

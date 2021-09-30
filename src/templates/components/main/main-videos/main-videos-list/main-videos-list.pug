@@ -1,0 +1,18 @@
+include main-videos-list.data.pug
+
+div.main-video-list.wrapper
+  div.main-video-list__list
+    each videoItem in videoItems
+      div.main-video-list__item(class={'main-video-list__item--big': videoItem.isBig})
+        div.main-video-list__img-wrapper
+          img(src=videoItem.url, alt="").main-video-list__img
+          if videoItem.isBig
+            button.video-item__play
+              svg.video-item__play-ico
+                use(href="#play")
+  div.main-video-list__actions
+    button.main-video-list__btn.main-video-list__btn--more
+      svg.main-video-list__btn-ico
+        use(href="#load-more")
+        span.main-video-list__btn-text Load more examples
+    button.main-video-list__btn.btn Make an order now

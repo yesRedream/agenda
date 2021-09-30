@@ -1,0 +1,29 @@
+include main-videos-slider.data.pug
+
+div.main-video-slider
+    div.main-video-slider__wrapper.wrapper
+      div.main-video-slider__content
+        div.main-video-slider__list
+          each videoItem in videoItems
+            div.video-item
+              div.video-item__list
+                each videoImg in videoItem.img
+                  if videoItem.img.length == 3
+                    div.video-item__item(class={'video-item__item--big': videoImg.isBig})
+                      div.video-item__img-wrapper
+                        img(src=videoImg.url, alt="").video-item__img
+                        if videoImg.isBig
+                          button.video-item__play
+                            svg.video-item__play-ico
+                              use(href="#play")
+
+                  else
+                    div.video-item__item
+                      div.video-item__img-wrapper
+                        img(src=videoImg, alt="").video-item__img
+    div.main-video-slider__prev
+      svg.main-video-slider__ico
+        use(href="#slider-left-arrow")
+    div.main-video-slider__next
+      svg.main-video-slider__ico
+        use(href="#slider-right-arrow")

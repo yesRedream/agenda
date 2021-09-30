@@ -1,0 +1,29 @@
+include main-companies.data.pug
+
+div.main-companies
+  div.main-companies__wrapper.wrapper
+    div.main-companies__data
+      h3.main-companies__title We are trusted by the best companies in the world.
+      div.main-companies__tabs
+        each tab in tabs
+          div.main-companies__tab
+            input(type="radio" name="companies" id=tab.name checked=tab.checked).main-companies__input
+            label(for=tab.name).main-companies__label=tab.name
+
+      div.main-companies__list
+        each companie in companies
+          div.main-companies__item.main-companies-item
+            div.main-companies-item__img-wrapper
+              img(src=companie, alt="").main-companies-item__img
+      
+      div.main-companies__controls.main-companies-controls
+        div.main-companies-controls__prev
+          svg.main-companies-controls__ico
+            use(href="#slider-left-arrow")
+        div.main-companies-controls__next
+          svg.main-companies-controls__ico
+            use(href="#slider-right-arrow")
+
+
+      p.main-companies__text
+        | one of the largest hotel companies with a portfolio of eight different brands and more than 1,400 operating and under construction hotels in 114 countries;

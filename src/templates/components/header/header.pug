@@ -1,0 +1,12 @@
+include /components/base/base-dropdown/base-dropdown
+include header.data.pug
+
+header.header
+  div.header__wrapper.wrapper
+    div.header__data
+      div.header__box.header__box--logo
+        img(src="images/logo.svg", alt="logo").header__logo
+          
+      div.header__box.header__box--actions
+        +base-dropdown('header__dropdown', categories, 'Categories')
+        +base-dropdown('header__dropdown', language, 'EN')

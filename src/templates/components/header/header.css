@@ -1,0 +1,36 @@
+.header {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  @media (--viewport-tablet) {
+    display: block;
+  }
+}
+
+.header__wrapper {
+
+}
+
+.header__data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 37px 0;
+}
+
+.header__box {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 152px;
+}
+
+.header__dropdown {
+  padding-left: 30px;
+}

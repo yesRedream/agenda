@@ -1,0 +1,39 @@
+include main-places.data.pug
+
+div.main-places
+  div.main-places__wrapper.wrapper
+    div.main-places__data
+      h2.main-places__title Take The First Step
+        span.red-text .
+      p.main-places__subtitle Whatever your goal, here are a few places to get started
+
+      div.main-places__list
+        each place in places
+          div.main-places__item.main-places-item(style={'background-image': place.background})
+            if place.bookmark 
+              div.main-places-item__bookmark Coming later
+            h4.main-places-item__title=place.name 
+              span.red-text .
+            if !place.bookmark
+              svg.main-places-item__arrow
+                use(href="#slider-right-arrow")
+            div.main-places-item__content-wrap
+              div.main-places-item__content-bg
+              div.main-places-item__content
+                h4.main-places-item__title=place.name + '.'
+                p.main-places-item__text=place.text
+                button.main-places-item__btn.btn.btn-sm.btn-white.btn-with-ico=place.name + ' page'
+                  svg.btn-ico
+                    use(href="#arrow-right")
+
+        div.main-places__item.main-places-item.main-places-item--other
+          div.main-places-item__box
+            h4.main-places-item__title Other
+              span.red-text .
+            svg.main-places-item__arrow
+              use(href="#slider-right-arrow")
+            p.main-places-item__text I did’t found what I need
+          button.main-places-item__btn.btn.btn-sm.btn-with-ico Chat With Us
+            svg.btn-ico
+              use(href="#arrow-right")
+          
