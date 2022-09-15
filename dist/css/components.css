@@ -1950,7 +1950,7 @@
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-  background-image: url('/images/main-page/sale-bg.jpg');
+  background-image: url('../images/main-page/sale-bg.jpg');
   -moz-background-size: cover;
     -o-background-size: cover;
        background-size: cover;
